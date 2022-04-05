@@ -1,4 +1,4 @@
-import pytest as pytest
+import pytest
 
 
 @pytest.mark.usefixtures("setup")

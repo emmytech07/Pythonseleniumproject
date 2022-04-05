@@ -1,11 +1,11 @@
 import pytest
 from selenium import webdriver
+import time
+
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
-from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
-
-# @pytest.mark.usefixtures("setup")
 from utilities.BaseClass import BaseClass
 
 
