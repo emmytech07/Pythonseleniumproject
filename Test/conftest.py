@@ -1,6 +1,10 @@
 import pytest as pytest
-from selenium.webdriver.chrome import webdriver
+from selenium import webdriver
 
+
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
 
 @pytest.fixture(scope="class")
 def setup(request):
