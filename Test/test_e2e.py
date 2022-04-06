@@ -6,14 +6,18 @@ import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
+
+from pageObject.HomePage import Homepage
 from utilities.BaseClass import BaseClass
 
 
 class TestOne(BaseClass):
 
     def test_e2e(self):
+        homepage = Homepage(self.driver)
+        homepage.shopItems().click()
         # we can use setup or self
-        self.driver.find_element_by_css_selector("a[href*='shop']").click()
+        # self.driver.find_element_by_css_selector("a[href*='shop']").click()
         products = self.driver.find_elements_by_xpath("//div[@class='card h-100']")
 
         # //div[@class='card h-100']/div/h4/a
